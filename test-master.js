@@ -5,9 +5,9 @@
       var some_number = 484;
   
       //                     ┌ Change this to what it should be
-      assert.equal( value, 'hello tests');
+      assert.equal( value, '???');
       //                           ┌ Change this to what it should be
-      assert.equal( some_number, 484);
+      assert.equal( some_number, "???");
     });
   
     QUnit.test("Functions can access/modify variables in parent scope.", function(assert){
@@ -20,7 +20,7 @@
   
       yay();
   
-      assert.equal(outside_the_function, "can you see me?");
+      assert.equal(outside_the_function, "???");
     });
   
     QUnit.test("Function Parameters become scoped to the function.", function(assert){
