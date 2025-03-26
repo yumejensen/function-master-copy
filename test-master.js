@@ -9,7 +9,8 @@
       //                           ┌ Change this to what it should be
       assert.equal( some_number, 484);
     });
-  
+  // ---------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Functions can access/modify variables in parent scope.", function(assert){
       var outside_the_function = null; // exists in the parent scope
 
@@ -22,20 +23,22 @@
   
       assert.equal(outside_the_function, "can you see me?"); // outside the function should equal "can you see me?"
     });
-  
+  // ------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Function Parameters become scoped to the function.", function(assert){
   
       function yay(param){
-        assert.equal(param, "???");
+        assert.equal(param, "a fine kettle of fish");
       }
   
-      yay("a fine kettle of fish");
+      yay("a fine kettle of fish"); // inside parameter can be accessed in function scope
     });
-  
+  // --------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("A functions local scope is not available in an outer scope.", function(assert){
       function yay(){
         var kix = "kid tested mother approved";
-        assert.equal(kix, "???");
+        assert.equal(kix, "kid tested mother approved"); // changed line
       }
       yay();
       
@@ -49,9 +52,10 @@
       } else {
         has_kix = "i prefer cheerios";
       }
-      assert.equal(has_kix, "???");
+      assert.equal(has_kix, "i prefer cheerios"); // changed line
     });
-  
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Functions don't have access to eachothers scope", function(assert){
       function yay(){
         var from_yay = "i'm inside yay;";
