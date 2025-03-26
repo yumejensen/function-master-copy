@@ -72,7 +72,8 @@
       yay();
       foo();
     });
-  
+  // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Inner scope variables override outter scope variables.", function(assert){
   
       var peanuts = 300;
@@ -86,7 +87,8 @@
   
       assert.equal(peanuts, "???");
     });
-  
+  // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Variables created with var in a funtion are re-created each time", function(assert){
       function yay(){
         if(this.counter !== undefined){
@@ -103,7 +105,8 @@
       yay();
       assert.equal(this.counter, "???");
     });
-  
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Inner scope can access outer scope", function(assert){
       var im_outside = "alpha";
       function yay(){
@@ -113,7 +116,8 @@
   
       assert.equal(yay(), "???");
     });
-  
+  // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("Functions retain outer scope references between calls.", function(assert){
       var im_outside = 13;
       function yay(){
@@ -125,7 +129,8 @@
       yay();
       assert.equal(im_outside, "???");
     });
-  
+  // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("We can do goofy stuff with outer scope", function(assert){
   
       var hello = "greg";
@@ -142,7 +147,8 @@
       yay();
       assert.equal(name, "???");
     });
-  
+  // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     QUnit.test("We can pass functions to other functions and then run them.", function(assert){
       var im_outter = 10;
       function yay(){
@@ -156,6 +162,7 @@
       assert.equal(im_outter, "???");
   
     });
+  // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
     QUnit.test("We can get crazy with returns.", function(assert){
       function yay(){
