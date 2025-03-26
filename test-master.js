@@ -38,7 +38,7 @@
     QUnit.test("A functions local scope is not available in an outer scope.", function(assert){
       function yay(){
         var kix = "kid tested mother approved";
-        assert.equal(kix, "kid tested mother approved"); // changed line
+        assert.equal(kix, "kid tested mother approved"); // local scope kix = "kid tested mother approved"
       }
       yay();
       
@@ -47,12 +47,12 @@
       // "this" is a special object that by default represents the global scope.
       // variables declared globally are stored as a property on the object: this.<variable>
       // if the variable is not global then this.<variable> will be undefined
-      if(this.kix !== undefined){
+      if(this.kix !== undefined){ 
         has_kix = kix;
       } else {
         has_kix = "i prefer cheerios";
       }
-      assert.equal(has_kix, "i prefer cheerios"); // changed line
+      assert.equal(has_kix, "i prefer cheerios"); // kix is NOT global it is inside local scope, so has_kix = "i prefer cheerios"
     });
   // -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -62,12 +62,12 @@
       }
   
       function foo(){
-        var in_foo = "i'm in foo";
-        if(this.from_yay !== undefined){
+        var in_foo = "i'm in foo"; 
+        if(this.from_yay !== undefined){ //this.from_yay === undefined because it's not global
           in_foo = this.from_yay;
         }
-        assert.equal(in_foo, "???");
-        assert.equal(this.from_yay, "???");
+        assert.equal(in_foo, "i'm in foo"); // in_foo will be "i'm in foo"
+        assert.equal(this.from_yay, undefined); // this.from_yay is undefined
       }
       yay();
       foo();
@@ -81,11 +81,11 @@
       function yay(){
         var peanuts = "roasted";
   
-        assert.equal(peanuts, "???");
+        assert.equal(peanuts, "roasted");
       }
       yay();
   
-      assert.equal(peanuts, "???");
+      assert.equal(peanuts, 300); // the other peanuts is function scoped, so the outside one is still 300
     });
   // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -163,7 +163,7 @@
   
     });
   // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+
     QUnit.test("We can get crazy with returns.", function(assert){
       function yay(){
         return " is dog";
