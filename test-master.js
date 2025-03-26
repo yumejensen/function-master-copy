@@ -99,11 +99,11 @@
       }
   
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined); // undefind seemed to work...
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, "???"); // change
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, "???"); // change
     });
   // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
