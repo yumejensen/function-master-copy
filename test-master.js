@@ -99,11 +99,11 @@
       }
   
       yay();
-      assert.equal(this.counter, undefined); // undefind seemed to work...
+      assert.equal(this.counter, undefined); // counter isn't global, so it's undefined
       yay();
-      assert.equal(this.counter, "???"); // change
+      assert.equal(this.counter, undefined); // re-created
       yay();
-      assert.equal(this.counter, "???"); // change
+      assert.equal(this.counter, undefined); // re-created
     });
   // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
