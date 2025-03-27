@@ -114,7 +114,7 @@
         return im_outside + im_inside;
       }
   
-      assert.equal(yay(), "???");
+      assert.equal(yay(), "alphaomega"); // returns alphaomega because the function can access alpha
     });
   // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -125,9 +125,9 @@
       }
   
       yay();
-      assert.equal(im_outside, "???");
+      assert.equal(im_outside, 14); // im_outside = 13 + 1
       yay();
-      assert.equal(im_outside, "???");
+      assert.equal(im_outside, 15); // im_outside = 14 + 1
     });
   // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -141,11 +141,11 @@
       }
   
       yay();
-      assert.equal(name, "???");
+      assert.equal(name, "greg"); // name = "" plus greg
       yay();
-      assert.equal(name, "???");
+      assert.equal(name, "greggreg"); // name = greg + greg
       yay();
-      assert.equal(name, "???");
+      assert.equal(name, "greggreggreg"); // name = greggreg + greg
     });
   // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
