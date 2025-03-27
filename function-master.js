@@ -24,23 +24,28 @@ function keysToString(object) {
 function valuesToString(object) {
     return (Object.values(object)).join(' ');
 }
-// why isn't this working ???
+// why isn't this working ????????
 
 //////////////////////////////////////////////////////////////////////
 // Function 4 - Array or Object //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-
+// takes in an array or an object and returns array if array, object if object
 function arrayOrObject(collection) {
-    
+    if (Array.isArray(collection) === true){
+        return "array";
+    } else if (collection instanceof Date === false && collection !== null && typeof collection === 'object') {
+        return "object";
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 5 - Capitalize Word //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// takes in a string and returns it with the first letter capitalized
 function capitalizeWord(string) {
-    
+    return string[0].toUpperCase() + string.slice(1);
 }
 
 //////////////////////////////////////////////////////////////////////
