@@ -52,9 +52,18 @@ function capitalizeWord(string) {
 // Function 6 - Capitalize All Words /////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// takes in a string of words and returns with all words first letter capitalized
 function capitalizeAllWords(string) {
-    
+    //turn strings into an array
+    var arrayOfStrings = string.split();
+    // have holder array for capitalized
+    var capitalArray = [];
+    for (var i = 0; i < arrayOfStrings.length; i++){
+        capitalArray.push(arrayOfStrings[i][0].toUpperCase() + arrayOfStrings[i].slice(1));
+    }
+    return capitalArray.join(" ");
 }
+// this one isn't working....
 
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
