@@ -152,10 +152,10 @@
     QUnit.test("We can pass functions to other functions and then run them.", function(assert){
       var im_outter = 10;
       function yay(){
-        im_outter /= 5;
+        im_outter /= 5; // im_outter = 2
       }
       function something(whatever){
-        im_outter *= 20;
+        im_outter *= 20; // im_outter = 200
         whatever();
       }
       something(yay);
