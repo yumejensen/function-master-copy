@@ -156,10 +156,10 @@
       }
       function something(whatever){
         im_outter *= 20; // im_outter = 200
-        whatever();
+        whatever(); 
       }
       something(yay);
-      assert.equal(im_outter, "???");
+      assert.equal(im_outter, "??");
   
     });
   // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -171,7 +171,7 @@
       function foo(whatever){
         return "hello, this" + whatever();
       }
-      assert.equal(foo(yay), "???");
+      assert.equal(foo(yay), "hello, this is dog"); // hello, this + is dog
     });
   
   })();
