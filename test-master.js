@@ -158,8 +158,8 @@
         im_outter *= 20; // im_outter = 200
         whatever(); 
       }
-      something(yay);
-      assert.equal(im_outter, "??");
+      something(yay); // let whatever = yay, so when yay gets invoked inside whatever, 200 /= 5 happens
+      assert.equal(im_outter, 40); // 
   
     });
   // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
