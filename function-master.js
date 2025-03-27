@@ -69,7 +69,9 @@ function capitalizeAllWords(string) {
 // Function 7 - Welcome Message //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// takes an object with a name property then returns "Welcome <Name>!" - name must have capitalized first letter
 function welcomeMessage(object) {
+    return "Welcome " + object.name + "!"; // need to capitalize first letter
 
 }
 
