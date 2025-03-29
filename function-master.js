@@ -67,7 +67,7 @@ function capitalizeAllWords(string) {
     var arrayOfStrings = string.split(" ");
     //console.log(arrayOfStrings);
 
-    // have holder array for capitalized and push each modified string into array
+    // have holder array for capitalized and push each capitalized string into array
     var capitalArray = [];
     for (var i = 0; i < arrayOfStrings.length; i++){
         capitalArray.push(arrayOfStrings[i][0].toUpperCase() + arrayOfStrings[i].slice(1));
@@ -100,6 +100,7 @@ function profileInfo(object) {
     // turn both values into uppercased version
     var capitalName = object.name[0].toUpperCase() + object.name.slice(1);
     var capitalSpecies = object.species[0].toUpperCase() + object.species.slice(1);
+    // return message
     return capitalName + " is a " + capitalSpecies;
 
 }
@@ -112,13 +113,14 @@ function profileInfo(object) {
 I: An Object
 O: If a noises array exists, return it as a string separated by a space
 C: N/A
-E: If noise array doesn't exist, return a string that says "there are no noises"
+E: If noise array has length 0 or doesn't exist, return a string that says "there are no noises"
 */
 
 function maybeNoises(object) {
-    // if statement for checking whether noises exists, has values in it, AND is an array
+    // Check whether noises exists, has values in it, AND is an array
     if (Array.isArray(object.noises) && object.noises.length > 0){
       return object.noises.join(' ');
+      // if tests fail, return 'there are no nosies'
     } else {
       return "there are no noises";
     }
@@ -128,9 +130,14 @@ function maybeNoises(object) {
 // Function 10 - Has Words ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function hasWord(string, word) {
+/*
+I: A string of words and a word
+O: If the word is in the string of words, return boolean true - else return false
+*/
 
-}
+function hasWord(string, word) {
+    
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Function 11 - Add Friend //////////////////////////////////////////
