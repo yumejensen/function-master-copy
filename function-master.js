@@ -116,12 +116,11 @@ E: If noise array doesn't exist, return a string that says "there are no noises"
 */
 
 function maybeNoises(object) {
-    // if statement for checking whether noises exists
-    if (object['noises']){
-      return object['noises'].join(' ');
-    // else return 'there are no noises'
+    // if statement for checking whether noises exists, has values in it, AND is an array
+    if (Array.isArray(object.noises) && object.noises.length > 0){
+      return object.noises.join(' ');
     } else {
-      return 'there are no noises';
+      return "there are no noises";
     }
   }
 
