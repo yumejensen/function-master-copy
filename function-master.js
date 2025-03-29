@@ -169,9 +169,20 @@ function addFriend (name, object) {
 // Function 12 - Is Friend ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+/*
+I: A name and an object
+O: Return boolean true is <name is a friend of <object> and false otherwise
+*/
 function isFriend(name, object) {
-
-}
+    // check if name is inside friends array in object
+    // for loop going over friends array
+    for (var i = 0; i < object.friends.length; i++){
+      if (object.friends[i].toLowerCase() === name.toLowerCase()){
+        return true;
+      }
+    }
+    return false;
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Function 13 - Non-Friends /////////////////////////////////////////
