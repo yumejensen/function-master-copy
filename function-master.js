@@ -94,7 +94,13 @@ function welcomeMessage(object) {
 // Function 8 - Profile Info /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+// should take in an object with name + species and return '<Name> is a <Species>'
 function profileInfo(object) {
+    // dot notation to access name and species
+    // turn both things into uppercase
+    var capitalName = object.name[0].toUpperCase() + object.name.slice(1);
+    var capitalSpecies = object.species[0].toUpperCase() + object.species.slice(1);
+    return capitalName + " is a " + capitalSpecies;
 
 }
 
