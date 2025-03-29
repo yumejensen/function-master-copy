@@ -175,14 +175,16 @@ O: Return boolean true is <name is a friend of <object> and false otherwise
 */
 function isFriend(name, object) {
     // check if name is inside friends array in object
-    var friendss = object.friends;
-    // for loop going over friends array
-    for (var i = 0; i < friendss.length; i++){
-      if (friendss[i].toLowerCase() === name.toLowerCase()){
+  var friendsList = object.friends;
+  if (object.hasOwnProperty('friends')){
+    for (var i = 0; i < friendsList.length; i++){
+      if (friendsList[i].toLowerCase() === name.toLowerCase()){
         return true;
       }
     }
-    return false;
+  }
+  return false;
+ 
 }
   
 
