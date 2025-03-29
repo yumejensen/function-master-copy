@@ -136,9 +136,20 @@ O: If the word is in the string of words, return boolean true - else return fals
 */
 
 function hasWord(string, word) {
-    
+    // turn string into an array! with split
+    var stringArray = string.split(' ');
+    // for loop going over stringArray
+    for (var i = 0; i < stringArray.length; i++){
+      // if the contents of the array matches wr=ord, return true
+      if (stringArray[i] === word){
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 
+  
 //////////////////////////////////////////////////////////////////////
 // Function 11 - Add Friend //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
