@@ -97,7 +97,7 @@ function welcomeMessage(object) {
 // should take in an object with name + species and return '<Name> is a <Species>'
 function profileInfo(object) {
     // dot notation to access name and species
-    // turn both things into uppercase
+    // turn both values into uppercased version
     var capitalName = object.name[0].toUpperCase() + object.name.slice(1);
     var capitalSpecies = object.species[0].toUpperCase() + object.species.slice(1);
     return capitalName + " is a " + capitalSpecies;
@@ -108,9 +108,21 @@ function profileInfo(object) {
 // Function 9 - Maybe Noises /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function maybeNoises(object) {
+/*
+I: An Object
+O: If a noises array exists, return it as a string separated by a space
+C: N/A
+E: If noise array doesn't exist, return a string that says "there are no noises"
+*/
 
-}
+function maybeNoises(object) {
+    // if statement for checking whether noises exists
+    if (object.noises){
+      return object.noises.join(' ');
+    } else {
+      return 'there are no noises';
+    }
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Function 10 - Has Words ///////////////////////////////////////////
