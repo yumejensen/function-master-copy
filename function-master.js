@@ -195,6 +195,13 @@ function isFriend(name, object) {
 // Function 13 - Non-Friends /////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+/*
+I: A name string, and a list of people array
+O: A list array of names that <name> is not friends with
+   ex: console.log(nonFriends("Jimmy", data)); 
+       will equal print => ["Bob"]
+*/
+
 function nonFriends(name, array) {
 
 }
