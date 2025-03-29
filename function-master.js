@@ -184,7 +184,6 @@ function isFriend(name, object) {
     }
   }
   return false;
- 
 }
   
 
