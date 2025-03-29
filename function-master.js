@@ -24,7 +24,7 @@ function keysToString(object) {
 function valuesToString(object) {
     return (Object.values(object)).join(' ');
 }
-// why isn't this working ????????
+// why isn't this working ???????? i tested it and everything???????
 
 //////////////////////////////////////////////////////////////////////
 // Function 4 - Array or Object //////////////////////////////////////
@@ -54,16 +54,19 @@ function capitalizeWord(string) {
 
 // takes in a string of words and returns with all words first letter capitalized
 function capitalizeAllWords(string) {
-    //turn strings into an array
-    var arrayOfStrings = string.split();
-    // have holder array for capitalized
+    //turn strings into an array of words with split method
+    var arrayOfStrings = string.split(" ");
+    //console.log(arrayOfStrings);
+
+    // have holder array for capitalized and push each modified string into array
     var capitalArray = [];
     for (var i = 0; i < arrayOfStrings.length; i++){
         capitalArray.push(arrayOfStrings[i][0].toUpperCase() + arrayOfStrings[i].slice(1));
     }
+    // return modified array as a string with join
     return capitalArray.join(" ");
 }
-// this one isn't working....
+
 
 //////////////////////////////////////////////////////////////////////
 // Function 7 - Welcome Message //////////////////////////////////////
