@@ -203,7 +203,17 @@ O: A list array of names that <name> is not friends with
 */
 
 function nonFriends(name, array) {
-
+  // holder array
+  var nonFriendsArray = [];
+  // check every friends array of names that aren't <name>
+  // is <name> in those other arrays? - can use includes() method
+  // is both those conditions are true, push the name to nonFriends
+  for (var i = 0; i < array.length; i++){
+    if(array[i].name !== name && array[i].friends.includes(name) === false){
+      nonFriendsArray.push(array[i].name);
+    }
+  }
+  return nonFriendsArray;
 }
 
 //////////////////////////////////////////////////////////////////////
