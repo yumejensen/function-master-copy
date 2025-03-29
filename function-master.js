@@ -20,11 +20,20 @@ function keysToString(object) {
 // Function 3 - Values to String /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-// take an object and return its values as a string separated with a space
+// take an object and return its **string** values as a string separated with a space
 function valuesToString(object) {
-    return (Object.values(object)).join(' ');
-}
-// why isn't this working ???????? i tested it and everything???????
+    //holder array for values ** that are strings **
+    var stringy  = [];
+    // for in loop + if statement to tell if the value is a string
+    for (var key in object){
+      if (typeof object[key] === 'string'){
+      stringy.push(object[key]);
+        //console.log(stringy);
+      }
+    }
+    // return as a string with a space
+    return stringy.join(" ");
+  }
 
 //////////////////////////////////////////////////////////////////////
 // Function 4 - Array or Object //////////////////////////////////////
