@@ -228,8 +228,12 @@ O: Return object - should update <key> on <object> with new <value> - if <key> d
 */
 
 function updateObject(object, key, value) {
-  // update the object key and value
-  object.key = value;
+  // store key and value inside variables
+  var keyVar = key;
+  var valueVar = value;
+  // bracekt notation to add key/ value pair
+  object[keyVar] = valueVar;
+  // return the object
   return object;
 }
 
