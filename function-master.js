@@ -222,13 +222,25 @@ function nonFriends(name, array) {
 // Function 14 - Update Object ///////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-function updateObject(object, key, value) {
+/*
+I: An object, a key, and a value
+O: Return object - should update <key> on <object> with new <value> - if <key> does not exist, create it
+*/
 
+function updateObject(object, key, value) {
+  // update the object key and value
+  object.key = value;
+  return object;
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 15 - Remove Properties ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
+/*
+I: An object and an array of strings
+O: Remo
+*/
 
 function removeProperties(object, array) {
 
