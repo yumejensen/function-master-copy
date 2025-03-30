@@ -243,16 +243,33 @@ function updateObject(object, key, value) {
 
 /*
 I: An object and an array of strings
-O: Remo
+O: Remove any properties from the object if it's listed in the array of strings
 */
 
 function removeProperties(object, array) {
-
+  // make an array of objects keys
+  var keyArray = Object.keys(object);
+  
+  //for loop going over both arrays??
+  for (var i = 0; i < array.length; i++){
+    for (var j = 0; j < keyArray.length; j++){
+      if (array[i] === keyArray[j]){
+        var deleteName = keyArray[j];
+      }
+    }
+    delete object.deleteName
+  }
+  //return object;
 }
 
 //////////////////////////////////////////////////////////////////////
 // Function 16 - Dedup ///////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+
+/*
+I: An array
+O: Return an array with duplicates removed
+*/
 
 function dedup(array) {
 
