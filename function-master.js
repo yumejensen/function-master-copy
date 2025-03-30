@@ -247,19 +247,17 @@ O: Remove any properties from the object if it's listed in the array of strings
 */
 
 function removeProperties(object, array) {
-  // make an array of objects keys
+  // make array of keys, keyArray (using Object.keys)
   var keyArray = Object.keys(object);
-  
-  //for loop going over both arrays??
-  for (var i = 0; i < array.length; i++){
-    for (var j = 0; j < keyArray.length; j++){
-      if (array[i] === keyArray[j]){
-        var deleteName = keyArray[j];
-      }
+  // for loop going over keyArray
+  for (var i = 0; i < keyArray.length; i++){
+    // if <array> includes keyArray[i] (includes method) 
+    if (array.includes(keyArray[i])){
+      // delete the property
+      delete object[keyArray[i]];
     }
-    delete object.deleteName
   }
-  //return object;
+  return object;
 }
 
 //////////////////////////////////////////////////////////////////////
