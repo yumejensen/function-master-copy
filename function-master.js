@@ -269,8 +269,18 @@ I: An array
 O: Return an array with duplicates removed
 */
 
-function dedup(array) {
-  return something;
+function dedup(array){
+  // holder array for unique items
+  const uniqueArr = [];
+  // loop through input array
+  for (var i = 0; i < array.length; i++){
+    // push items from array -> unique array IF unique array does not include
+    if (!uniqueArr.includes(array[i])){
+      uniqueArr.push(array[i]);
+    }
+  }
+  // return unique items array
+  return uniqueArr;
 }
 
 //////////////////////////////////////////////////////////////////////
